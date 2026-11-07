@@ -217,7 +217,48 @@
   </script>
 </section>
   <section class="section" id="events"><h2 data-en="Church events" data-ne="चर्च कार्यक्रमहरू">Church events</h2><p data-en="The church calendar will be connected here. Please check with church leadership for current service times." data-ne="चर्चको पात्रो यहाँ जोडिनेछ। सेवाको समयका लागि चर्चका अगुवाहरूसँग बुझ्नुहोस्।">The church calendar will be connected here. Please check with church leadership for current service times.</p></section>
-  <section class="section" id="prayer"><h2 data-en="Prayer requests" data-ne="प्रार्थना अनुरोध">Prayer requests</h2><p data-en="Share a request with the authorized prayer team. Do not include sensitive personal or medical details unless necessary." data-ne="अधिकृत प्रार्थना टोलीसँग आफ्नो अनुरोध साझा गर्नुहोस्। आवश्यक नभएसम्म संवेदनशील व्यक्तिगत वा स्वास्थ्य विवरण नलेख्नुहोस्।">Share a request with the authorized prayer team. Do not include sensitive personal or medical details unless necessary.</p><a class="secondary" data-link="prayer" href="mailto:church@example.org?subject=Prayer%20Request" data-en="Prayer request form (setup needed)" data-ne="प्रार्थना फाराम (सेटअप आवश्यक)">Prayer request form (setup needed)</a></section>
+  <section class="section" id="prayer">
+    <h2 data-en="Prayer requests" data-ne="प्रार्थना अनुरोध">Prayer requests</h2>
+    <p data-en="Share your prayer request with our church prayer team. Please avoid including highly sensitive personal information." data-ne="आफ्नो प्रार्थना अनुरोध चर्चको प्रार्थना टोलीसँग साझा गर्नुहोस्। कृपया अति संवेदनशील व्यक्तिगत जानकारी नलेख्नुहोस्।">Share your prayer request with our church prayer team. Please avoid including highly sensitive personal information.</p>
+    <form id="prayerRequestForm" style="display:grid;gap:12px;max-width:680px">
+      <label for="prayerName"><strong data-en="Your name (optional)" data-ne="तपाईंको नाम (ऐच्छिक)">Your name (optional)</strong></label>
+      <input id="prayerName" name="name" type="text" autocomplete="name" placeholder="Name / नाम" style="padding:13px;border:1px solid #c5b48a;border-radius:10px;font:inherit">
+      <label for="prayerLanguage"><strong data-en="Preferred language" data-ne="मनपर्ने भाषा">Preferred language</strong></label>
+      <select id="prayerLanguage" name="language" style="padding:13px;border:1px solid #c5b48a;border-radius:10px;font:inherit">
+        <option value="English">English</option><option value="नेपाली">नेपाली</option>
+      </select>
+      <label for="prayerMessage"><strong data-en="Prayer request" data-ne="प्रार्थना अनुरोध">Prayer request</strong></label>
+      <textarea id="prayerMessage" name="message" rows="6" required placeholder="Write your prayer request here... / यहाँ आफ्नो प्रार्थना अनुरोध लेख्नुहोस्..." style="padding:13px;border:1px solid #c5b48a;border-radius:10px;font:inherit;resize:vertical"></textarea>
+      <label style="display:flex;gap:10px;align-items:flex-start">
+        <input id="prayerPrivate" type="checkbox" style="margin-top:4px">
+        <span><strong data-en="Please keep this request private (share only with the prayer team)." data-ne="कृपया यो अनुरोध गोप्य राख्नुहोस् (प्रार्थना टोलीसँग मात्र साझा गर्नुहोस्)।">Please keep this request private (share only with the prayer team).</strong></span>
+      </label>
+      <button class="primary" type="submit" style="border:0;cursor:pointer;font:inherit" data-en="Send prayer request by email" data-ne="इमेलमार्फत प्रार्थना अनुरोध पठाउनुहोस्">Send prayer request by email</button>
+      <small data-en="Your email app will open with the request addressed to the church. Review it and press Send. This form does not store submissions on the website." data-ne="चर्चको इमेल ठेगानामा अनुरोध तयार भएको तपाईंको इमेल एप खुल्नेछ। जाँच गरेर पठाउनुहोस् थिच्नुहोस्। यो फारामले वेबसाइटमा अनुरोध भण्डारण गर्दैन।">Your email app will open with the request addressed to the church. Review it and press Send. This form does not store submissions on the website.</small>
+      <p id="prayerFormStatus" role="status" aria-live="polite"></p>
+    </form>
+    <script>
+      document.getElementById('prayerRequestForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('prayerName').value.trim() || 'Not provided';
+        const language = document.getElementById('prayerLanguage').value;
+        const message = document.getElementById('prayerMessage').value.trim();
+        const isPrivate = document.getElementById('prayerPrivate').checked;
+        if (!message) return;
+        const subject = encodeURIComponent('Prayer Request / प्रार्थना अनुरोध');
+        const body = encodeURIComponent(
+          'Prayer Request / प्रार्थना अनुरोध\n\n' +
+          'Name / नाम: ' + name + '\n' +
+          'Preferred language / मनपर्ने भाषा: ' + language + '\n' +
+          'Privacy request / गोपनीयता अनुरोध: ' + (isPrivate ? 'Private — prayer team only / गोप्य — प्रार्थना टोली मात्र' : 'No special privacy request / विशेष गोपनीयता अनुरोध छैन') +
+          '\n\nRequest / अनुरोध:\n' + message
+        );
+        document.getElementById('prayerFormStatus').textContent =
+          'Your email app should open now. Please review the message and press Send. / तपाईंको इमेल एप खुल्नुपर्छ। कृपया सन्देश जाँच गरेर पठाउनुहोस्।';
+        window.location.href = 'mailto:namunabetheljyotichurch@gmail.com?subject=' + subject + '&body=' + body;
+      });
+    </script>
+  </section>
   <section class="section" id="news"><h2 data-en="Announcements" data-ne="सूचनाहरू">Announcements</h2><p data-en="Church announcements and ministry updates will be posted here." data-ne="चर्चका सूचना तथा सेवकाइका अपडेटहरू यहाँ राखिनेछन्।">Church announcements and ministry updates will be posted here.</p></section>
   <section class="section" id="leaders"><h2 data-en="Pastor & leadership" data-ne="पास्टर तथा अगुवाहरू">Pastor & leadership</h2><p data-en="Pastor biographies, ministry roles and approved contact details will be added here." data-ne="पास्टरको परिचय, सेवकाइका जिम्मेवारी र स्वीकृत सम्पर्क विवरण यहाँ राखिनेछन्।">Pastor biographies, ministry roles and approved contact details will be added here.</p></section>
   <section class="section" id="giving"><h2 data-en="Online giving" data-ne="अनलाइन भेटी">Online giving</h2><p data-en="Use only the church's verified giving provider. The official giving link must be supplied by church leadership before this button is activated." data-ne="चर्चले प्रमाणित गरेको भेटी प्रदायक मात्र प्रयोग गर्नुहोस्। यो बटन सक्रिय गर्नुअघि चर्चका अगुवाहरूले आधिकारिक लिङ्क उपलब्ध गराउनुपर्छ।">Use only the church's verified giving provider. The official giving link must be supplied by church leadership before this button is activated.</p></section>
