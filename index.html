@@ -7,15 +7,39 @@
   <link rel="stylesheet" href="styles.css"><title>Namuna Bethel Jyoti Church</title>
 </head>
 <body>
-<header class="topbar"><a class="brand" href="#home"><img src="church-logo.png" alt="Namuna Bethel Jyoti Church logo"><span>NAMUNA BETHEL<br>JYOTI CHURCH</span></a><button id="langToggle" class="lang" aria-label="Switch language">नेपाली</button></header>
+<div class="welcome-strip"><span data-en="A place to worship, grow and belong" data-ne="आराधना, आत्मिक वृद्धि र सङ्गतिको स्थान">A place to worship, grow and belong</span><span class="strip-location">Columbus, Ohio</span></div>
+<header class="topbar">
+  <a class="brand" href="#home"><img src="church-logo.png" alt="Namuna Bethel Jyoti Church logo"><span>NAMUNA BETHEL<br><strong>JYOTI CHURCH</strong></span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#home" data-en="Home" data-ne="गृहपृष्ठ">Home</a>
+    <a href="#worship" data-en="Worship" data-ne="आराधना">Worship</a>
+    <a href="#sermons" data-en="Sermons" data-ne="प्रवचन">Sermons</a>
+    <a href="#events" data-en="Events" data-ne="कार्यक्रम">Events</a>
+    <a href="#prayer" data-en="Prayer" data-ne="प्रार्थना">Prayer</a>
+  </nav>
+  <button id="langToggle" class="lang" aria-label="Switch language">नेपाली</button>
+</header>
 <main id="home">
   <section class="hero">
-    <img class="hero-logo" src="church-logo.png" alt="Church logo">
-    <p class="eyebrow" data-en="COLUMBUS, OHIO" data-ne="कोलम्बस, ओहायो">COLUMBUS, OHIO</p>
-    <h1 data-en="Welcome to Namuna Bethel Jyoti Church" data-ne="नमुना बेथेल ज्योति चर्चमा स्वागत छ">Welcome to Namuna Bethel Jyoti Church</h1>
-    <p class="verse" data-en="“I am the light of the world.” — John 8:12" data-ne="“म संसारको ज्योति हुँ।” — यूहन्ना ८:१२">“I am the light of the world.” — John 8:12</p>
-    <p data-en="Growing in Christ, serving in love, shining His light." data-ne="ख्रीष्टमा बढ्दै, प्रेममा सेवा गर्दै, उहाँको ज्योति चम्काउँदै।">Growing in Christ, serving in love, shining His light.</p>
-    <a class="primary" href="#live" data-en="Watch / Join Live Worship" data-ne="प्रत्यक्ष आराधना हेर्नुहोस्">Watch / Join Live Worship</a>
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="WELCOME TO OUR CHURCH" data-ne="हाम्रो चर्चमा स्वागत छ">WELCOME TO OUR CHURCH</span></p>
+      <h1 data-en="A community growing in faith and love." data-ne="विश्वास र प्रेममा बढ्दै गरेको एक समुदाय।">A community growing in faith and love.</h1>
+      <p class="hero-intro" data-en="Come worship with us, connect with our church family, and discover the hope we have in Jesus Christ." data-ne="हामीसँग आराधना गर्नुहोस्, चर्च परिवारसँग जोडिनुहोस् र येशू ख्रीष्टमा भएको आशा अनुभव गर्नुहोस्।">Come worship with us, connect with our church family, and discover the hope we have in Jesus Christ.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#live" data-en="Watch Live Worship" data-ne="प्रत्यक्ष आराधना हेर्नुहोस्">Watch Live Worship</a>
+        <a class="hero-outline" href="#events" data-en="Explore Our Church" data-ne="हाम्रो चर्चबारे जान्नुहोस्">Explore Our Church</a>
+      </div>
+      <p class="hero-verse" data-en="“I am the light of the world.” — John 8:12" data-ne="“म संसारको ज्योति हुँ।” — यूहन्ना ८:१२">“I am the light of the world.” — John 8:12</p>
+    </div>
+    <div class="hero-art">
+      <div class="hero-glow"></div>
+      <div class="hero-logo-frame"><img class="hero-logo" src="church-logo.png" alt="Namuna Bethel Jyoti Church logo"></div>
+      <div class="hero-caption"><span class="caption-mark">✦</span><span><strong>FAITH · WORSHIP · FELLOWSHIP</strong><small>Columbus, Ohio</small></span></div>
+    </div>
+  </section>
+  <section class="welcome-band">
+    <div><span class="welcome-kicker" data-en="YOU ARE WELCOME HERE" data-ne="तपाईंलाई यहाँ स्वागत छ">YOU ARE WELCOME HERE</span><h2 data-en="Growing in Christ. Serving in love. Shining His light." data-ne="ख्रीष्टमा बढ्दै। प्रेममा सेवा गर्दै। उहाँको ज्योति चम्काउँदै।">Growing in Christ. Serving in love. Shining His light.</h2></div>
+    <a href="#prayer" data-en="Share a prayer request →" data-ne="प्रार्थना अनुरोध पठाउनुहोस् →">Share a prayer request →</a>
   </section>
   <section class="section"><h2 data-en="Connect with us" data-ne="हामीसँग जोडिनुहोस्">Connect with us</h2><div class="grid">
     <a class="tile" href="#live"><span>▶</span><b data-en="Live Streaming" data-ne="प्रत्यक्ष प्रसारण">Live Streaming</b></a>
@@ -265,6 +289,13 @@
   <section class="section" id="giving"><h2 data-en="Online giving" data-ne="अनलाइन भेटी">Online giving</h2><p data-en="Use only the church's verified giving provider. The official giving link must be supplied by church leadership before this button is activated." data-ne="चर्चले प्रमाणित गरेको भेटी प्रदायक मात्र प्रयोग गर्नुहोस्। यो बटन सक्रिय गर्नुअघि चर्चका अगुवाहरूले आधिकारिक लिङ्क उपलब्ध गराउनुपर्छ।">Use only the church's verified giving provider. The official giving link must be supplied by church leadership before this button is activated.</p></section>
   <section class="section" id="bible"><h2 data-en="Bible reading" data-ne="बाइबल अध्ययन">Bible reading</h2><p data-en="Open a trusted Bible reading resource in your preferred language." data-ne="आफ्नो मनपर्ने भाषामा विश्वसनीय बाइबल अध्ययन स्रोत खोल्नुहोस्।">Open a trusted Bible reading resource in your preferred language.</p><a class="secondary" href="https://www.bible.com/" target="_blank" rel="noopener" data-en="Open Bible.com" data-ne="Bible.com खोल्नुहोस्">Open Bible.com</a></section>
 </main>
-<footer><b>NAMUNA BETHEL JYOTI CHURCH</b><p data-en="Columbus, Ohio · Faith • Worship • Fellowship" data-ne="कोलम्बस, ओहायो · विश्वास • आराधना • सङ्गति">Columbus, Ohio · Faith • Worship • Fellowship</p><small>John 8:12</small></footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="church-logo.png" alt=""><div><b>NAMUNA BETHEL<br>JYOTI CHURCH</b><p data-en="Columbus, Ohio" data-ne="कोलम्बस, ओहायो">Columbus, Ohio</p></div></div>
+    <p class="footer-motto" data-en="Growing in Christ, serving in love, shining His light." data-ne="ख्रीष्टमा बढ्दै, प्रेममा सेवा गर्दै, उहाँको ज्योति चम्काउँदै।">Growing in Christ, serving in love, shining His light.</p>
+    <div class="footer-social"><a href="https://youtube.com/@namunabetheljyotichurch" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/share/1CShnF2QJn/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></div>
+    <small>“I am the light of the world.” · John 8:12</small>
+  </div>
+</footer>
 <script src="config.js"></script><script src="app.js"></script>
 </body></html>
