@@ -61,6 +61,15 @@
   <p>नेपाली मण्डलीका प्रशंसा र आराधनाका गीतहरू</p>
 
   <input id="songSearch" type="search" placeholder="गीत खोज्नुहोस् / Search songs..." style="width:100%;padding:14px;border:1px solid #c5b48a;border-radius:10px;margin:15px 0;font-size:16px;">
+  <div class="song-tools" aria-label="Song library tools">
+    <button type="button" id="romanToggle" aria-pressed="false">अंग्रेजी अक्षरमा / Romanized</button>
+    <button type="button" id="playlistToggle" aria-pressed="false">☆ My Playlist</button>
+    <button type="button" id="scrollStart">▶ Auto-scroll</button>
+    <button type="button" id="scrollStop">Ⅱ Stop</button>
+    <label class="scroll-speed">Speed <select id="scrollSpeed"><option value="1">Slow</option><option value="2" selected>Normal</option><option value="4">Fast</option></select></label>
+    <div class="transpose-tools"><span>Chord transpose</span><button type="button" id="transposeDown" aria-label="Transpose chords down">−</button><strong id="transposeValue">0</strong><button type="button" id="transposeUp" aria-label="Transpose chords up">+</button><button type="button" id="transposeReset">Reset</button></div>
+  </div>
+  <p class="song-tools-note">Save songs to your playlist. Romanized lyrics are generated automatically; chord transposition works on songs containing chords in [G] format.</p>
 
   <h3>🎉 प्रशंसाका गीतहरू (Praise Songs)</h3>
   <div id="praiseSongs">
