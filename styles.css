@@ -111,3 +111,17 @@ footer small{color:var(--gold-light);font-size:.78rem}
   footer{margin-top:35px;padding-top:38px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Song library tools */
+.song-tools{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:12px 0 5px;padding:14px;background:#f7f3e9;border:1px solid var(--line);border-radius:6px}
+.song-tools button,.scroll-speed select{border:1px solid #cfc3a9;background:#fff;color:var(--green);border-radius:5px;padding:9px 12px;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer}
+.song-tools button:hover,.song-tools button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.scroll-speed{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+.transpose-tools{display:flex;align-items:center;gap:7px;margin-left:auto;padding-left:10px;border-left:1px solid #d8cfbd;font-size:.85rem;color:var(--green)}
+.transpose-tools button{min-width:34px;padding:6px 10px}
+.song-tools-note{margin:0 0 14px;color:var(--muted);font-size:.82rem}
+.song-entry .song-controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px 0}
+.song-entry .song-controls button{border:1px solid #d8cfbd;border-radius:4px;background:#fff;color:var(--green);padding:6px 10px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.song-entry .song-controls button.saved{background:#f2ead6;border-color:var(--gold);color:#765719}
+.song-entry .song-lyrics p{white-space:pre-line}
+@media(max-width:640px){.song-tools{gap:7px;padding:10px}.song-tools button{font-size:.8rem;padding:8px 9px}.transpose-tools{margin-left:0;padding-left:0;border-left:0;width:100%}}
