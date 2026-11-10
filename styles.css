@@ -307,7 +307,7 @@ body{background:#fff;color:#1c2c3b}
 .brand strong{color:#b88a2c}
 .main-nav a{color:#203449}
 .lang{background:#0d2b3e;border-color:#d9a936;border-radius:8px}
-.hero{min-height:660px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,31,48,.98) 0%,rgba(7,31,48,.93) 48%,rgba(7,31,48,.48) 100%),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;padding:88px max(24px,calc((100vw - 1160px)/2));}
+.hero{min-height:660px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,31,48,.98) 0%,rgba(7,31,48,.93) 48%,rgba(7,31,48,.48) 100%),url('https://www.ocalaadventistchurch.org/lovable-uploads/74c70075-19c6-461c-b565-d0c4232cbc17.png') center/cover no-repeat;padding:88px max(24px,calc((100vw - 1160px)/2));}
 .hero:before,.hero:after{display:none}
 .hero-copy{max-width:850px}
 .eyebrow{margin-bottom:28px;color:#e2b34f;font-size:.88rem;letter-spacing:.22em;font-weight:850}
@@ -337,7 +337,7 @@ body{background:#fff;color:#1c2c3b}
 .visit-times strong{color:#1c2c3b;font-size:1rem}
 .visit-times span{color:#687583;margin-top:4px}
 .visit-button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:#d9a936;color:#10283a;text-decoration:none;font-weight:800;border-radius:8px;white-space:nowrap}
-.sermon-feature{position:relative;isolation:isolate;overflow:hidden;max-width:1160px;min-height:500px;margin:46px auto;padding:54px;background:linear-gradient(90deg,rgba(6,30,47,.94),rgba(6,30,47,.72) 55%,rgba(6,30,47,.18)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;border:1px solid #d4c29b;border-radius:18px;color:white}
+.sermon-feature{position:relative;isolation:isolate;overflow:hidden;max-width:1160px;min-height:500px;margin:46px auto;padding:54px;background:linear-gradient(90deg,rgba(6,30,47,.94),rgba(6,30,47,.72) 55%,rgba(6,30,47,.18)),url('https://images.unsplash.com/photo-1610547995911-9fa4717cb724?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;border:1px solid #d4c29b;border-radius:18px;color:white}
 .sermon-content{max-width:680px}
 .sermon-feature h2{margin:24px 0 12px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.7rem,5vw,4.4rem);font-weight:500;line-height:1.08;letter-spacing:-.035em}
 .sermon-nepali{color:#f0c875;font-family:Georgia,serif;font-size:1.65rem;margin:18px 0 32px}
