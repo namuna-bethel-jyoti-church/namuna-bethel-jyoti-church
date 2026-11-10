@@ -377,3 +377,22 @@ body{background:#fff;color:#1c2c3b}
 .bhajan-category{background:linear-gradient(135deg,#45614b,#1d3a32)}
 .chorus-category{background:linear-gradient(135deg,#8b6330,#49351e)}
 @media(max-width:640px){.song-category-grid{gap:10px}.song-category{min-height:145px;padding:16px;border-radius:12px}.song-category strong{font-size:1.05rem}.song-category small{font-size:.82rem}.category-symbol{width:36px;height:36px;margin-bottom:6px}}
+
+
+/* Official church identity header — logo before the full church name */
+.topbar{background:#0b2638!important;color:#fff!important;border-bottom:2px solid #c9a45c!important;min-height:94px}
+.brand{display:flex;align-items:center;gap:17px;color:#fff!important;letter-spacing:0;font-size:1rem;line-height:1.2}
+.brand img{width:76px!important;height:76px!important;flex:0 0 76px;object-fit:contain!important;border:2px solid #c9a45c!important;border-radius:50%;background:#fff!important;padding:2px;box-shadow:0 2px 12px #0003}
+.brand-copy{display:flex;flex-direction:column;gap:5px}
+.brand-copy b{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.05rem,2vw,1.55rem);font-weight:700;letter-spacing:.005em;color:#fff}
+.brand-copy small{font-family:Georgia,'Times New Roman',serif;font-size:.88rem;font-style:italic;letter-spacing:.1em;color:#e6c477}
+.main-nav a{color:#f3f5f8!important}
+.main-nav a:hover{color:#e6c477!important}
+.lang{background:#0b2638!important;color:#fff!important;border:1px solid #c9a45c!important;border-radius:9px!important}
+@media(max-width:640px){
+ .topbar{grid-template-columns:1fr auto!important;min-height:80px}
+ .brand{gap:10px;font-size:.9rem}
+ .brand img{width:57px!important;height:57px!important;flex-basis:57px}
+ .brand-copy b{font-size:1.02rem;line-height:1.18}
+ .brand-copy small{font-size:.72rem;letter-spacing:.07em}
+}
