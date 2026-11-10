@@ -296,3 +296,69 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
  .tile{min-height:125px;padding:16px}
 }
+
+
+/* November 2026 — navy and warm-gold editorial redesign */
+:root{--green:#0d2b3e;--green-deep:#082235;--green-soft:#19445c;--gold:#d9a936;--gold-light:#f0c875;--cream:#f6f4ef;--ink:#1c2c3b;--muted:#667381;--line:#e7e1d6}
+body{background:#fff;color:#1c2c3b}
+.welcome-strip{background:#082235;color:#f2d18a}
+.topbar{min-height:88px;padding-left:max(22px,calc((100vw - 1240px)/2));padding-right:max(22px,calc((100vw - 1240px)/2));box-shadow:0 5px 24px #0822350c}
+.brand{font-family:Georgia,serif;font-size:.86rem;letter-spacing:.035em}
+.brand strong{color:#b88a2c}
+.main-nav a{color:#203449}
+.lang{background:#0d2b3e;border-color:#d9a936;border-radius:8px}
+.hero{min-height:660px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,31,48,.98) 0%,rgba(7,31,48,.93) 48%,rgba(7,31,48,.48) 100%),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;padding:88px max(24px,calc((100vw - 1160px)/2));}
+.hero:before,.hero:after{display:none}
+.hero-copy{max-width:850px}
+.eyebrow{margin-bottom:28px;color:#e2b34f;font-size:.88rem;letter-spacing:.22em;font-weight:850}
+.eyebrow-line{display:none}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.3rem,7.4vw,6.2rem);font-weight:500;line-height:1.02;letter-spacing:-.045em;max-width:900px}
+.hero-highlight{margin:0;color:#f0c875;font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.7rem,6.4vw,5.3rem);font-style:italic;line-height:1.08;letter-spacing:-.04em}
+.hero-intro{max-width:790px;margin:34px 0 0;color:#d3dee7;font-size:clamp(1.08rem,2vw,1.35rem);line-height:1.8}
+.hero-actions{gap:16px;margin-top:34px}
+.hero .primary,.hero-outline{min-height:64px;padding:16px 30px;border-radius:10px;font-size:1.05rem}
+.hero .primary{background:#d9a936;color:#10283a}
+.hero .primary:hover{background:#efc66b}
+.hero-outline{border:2px solid #aab8c2;color:white}
+.hero-outline:hover{background:#ffffff16}
+.hero-verse{display:none}
+.service-note{display:flex;align-items:center;gap:16px;margin-top:52px;color:#d4e0e9}
+.service-note strong,.service-note span{display:block}
+.service-note strong{font-size:1.12rem;color:#e4edf3}
+.service-note div>span{margin-top:4px;font-size:1rem;color:#c0ccd6}
+.service-dot{width:16px;height:16px;flex:0 0 16px;border-radius:50%;background:#d9a936;box-shadow:0 0 0 12px #d9a93620;margin:0 8px}
+.welcome-band{margin:0 auto 28px;max-width:1160px;border-radius:0 0 14px 14px}
+.visit-strip{max-width:1160px;margin:34px auto 48px;padding:32px 36px;display:grid;grid-template-columns:1fr 1.5fr auto;align-items:center;gap:28px;background:#f7f4ed;border:1px solid #e8e0d2;border-radius:14px}
+.section-kicker{display:block;color:#a47a27;font-size:.8rem;font-weight:850;letter-spacing:.2em}
+.visit-strip h2{margin:8px 0 0;color:#142b3e;font-family:Georgia,serif;font-size:1.75rem;font-weight:500}
+.visit-times{display:flex;gap:35px;flex-wrap:wrap}
+.visit-times p{margin:0}
+.visit-times strong,.visit-times span{display:block}
+.visit-times strong{color:#1c2c3b;font-size:1rem}
+.visit-times span{color:#687583;margin-top:4px}
+.visit-button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:#d9a936;color:#10283a;text-decoration:none;font-weight:800;border-radius:8px;white-space:nowrap}
+.sermon-feature{position:relative;isolation:isolate;overflow:hidden;max-width:1160px;min-height:500px;margin:46px auto;padding:54px;background:linear-gradient(90deg,rgba(6,30,47,.94),rgba(6,30,47,.72) 55%,rgba(6,30,47,.18)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;border:1px solid #d4c29b;border-radius:18px;color:white}
+.sermon-content{max-width:680px}
+.sermon-feature h2{margin:24px 0 12px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.7rem,5vw,4.4rem);font-weight:500;line-height:1.08;letter-spacing:-.035em}
+.sermon-nepali{color:#f0c875;font-family:Georgia,serif;font-size:1.65rem;margin:18px 0 32px}
+.sermon-meta{color:#e1e7ec;font-size:1.05rem;margin:0 0 28px}
+.sermon-feature .primary{background:#e4b957;color:#10283a;border-radius:9px;padding:15px 25px;text-decoration:none;font-weight:850}
+.section{border-radius:14px}
+@media(max-width:900px){.visit-strip{margin:24px 18px;grid-template-columns:1fr 1fr}.visit-button{justify-self:start}.sermon-feature{margin:30px 18px}}
+@media(max-width:640px){
+ .hero{min-height:690px;padding:62px 23px 48px;background-position:62% center}
+ .hero h1{font-size:clamp(3rem,12vw,4.2rem)}
+ .hero-highlight{font-size:clamp(2.55rem,10vw,3.55rem)}
+ .hero-intro{margin-top:25px;font-size:1.02rem;line-height:1.75}
+ .hero-actions{display:grid;grid-template-columns:1fr;gap:12px}
+ .hero .primary,.hero-outline{width:100%;min-height:58px}
+ .service-note{margin-top:42px}
+ .service-note div>span{font-size:.9rem}
+ .visit-strip{margin:20px 12px 30px;padding:24px 20px;grid-template-columns:1fr;gap:20px}
+ .visit-strip h2{font-size:1.55rem}
+ .visit-times{display:grid;gap:16px}
+ .visit-button{width:100%}
+ .sermon-feature{min-height:530px;margin:24px 12px;padding:28px 22px;background-position:60% center;border-radius:14px}
+ .sermon-feature h2{font-size:2.7rem}
+ .sermon-nepali{font-size:1.35rem}
+}
