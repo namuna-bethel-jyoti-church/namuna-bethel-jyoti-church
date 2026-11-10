@@ -362,3 +362,18 @@ body{background:#fff;color:#1c2c3b}
  .sermon-feature h2{font-size:2.7rem}
  .sermon-nepali{font-size:1.35rem}
 }
+
+
+/* Song library category cards — four sections only */
+.song-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0 28px}
+.song-category{min-height:178px;padding:22px 24px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:5px;position:relative;overflow:hidden;border-radius:16px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#173b52,#0b2538);box-shadow:0 8px 22px #0b25381a}
+.song-category:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff30;border-radius:50%;right:-35px;top:-75px;box-shadow:0 0 0 22px #ffffff08,0 0 0 48px #ffffff06}
+.song-category:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.song-category strong,.song-category small,.category-symbol{position:relative;z-index:1}
+.song-category strong{font-size:1.35rem;font-weight:850;letter-spacing:-.02em}
+.song-category small{font-size:.95rem;color:#f1e5ce}
+.category-symbol{width:42px;height:42px;margin-bottom:10px;display:grid;place-items:center;border-radius:50%;background:#ffffff20;font-size:1.4rem}
+.worship-category{background:linear-gradient(135deg,#4c3947,#201e32)}
+.bhajan-category{background:linear-gradient(135deg,#45614b,#1d3a32)}
+.chorus-category{background:linear-gradient(135deg,#8b6330,#49351e)}
+@media(max-width:640px){.song-category-grid{gap:10px}.song-category{min-height:145px;padding:16px;border-radius:12px}.song-category strong{font-size:1.05rem}.song-category small{font-size:.82rem}.category-symbol{width:36px;height:36px;margin-bottom:6px}}
